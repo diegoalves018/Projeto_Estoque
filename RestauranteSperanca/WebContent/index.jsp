@@ -13,7 +13,7 @@
       div {
         float: left;
         height: 270px;
-        width: 45%;
+        width: 35%;
         padding: 0 10px;
       }
       #column1 {
