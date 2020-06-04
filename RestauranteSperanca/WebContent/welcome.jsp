@@ -14,7 +14,7 @@
 <%
 response.setHeader("Cache-Control","no-cach,no-store,must-revalidate");
 if(session.getAttribute("username")==null){
-	response.sendRedirect("login.jsp"); 
+	response.sendRedirect("index.jsp"); 
 }
 %>
 
