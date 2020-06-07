@@ -6,7 +6,7 @@ import java.sql.*;
 public class CardapioDao {
 
 	
-	private static final String DRIVER = "com.mysql.jdbc.Driver";
+	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/estoque?useTimezone=true&serverTimezone=America/Sao_Paulo";
     private static final String Cardapio = "root";
     private static final String SENHA = "admin";

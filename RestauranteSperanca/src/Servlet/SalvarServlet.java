@@ -29,14 +29,18 @@ public class SalvarServlet extends HttpServlet {
 		e.setEmail(email);
 		
 		
+		if(UsuarioDao.existeUsuario(e)) {
+			out.print("<p>Email já cadastrado!</p>");
+			request.getRequestDispatcher("index.jsp").include(request, response);
+		}else {
 		int status=UsuarioDao.save(e);
-		if(status>0){
+		    if(status>0){
 			out.print("<p>Cadastro efetuado com sucesso!</p>");
 			request.getRequestDispatcher("index.jsp").include(request, response);
-		}else{
-			out.println("Erro! Não foi possível salvar seus dados!");
+		   }else {
+			out.println("Erro! Não foi possível salvar seus dados!");   
+		   }
 		}
-		
 		out.close();
 	}
 

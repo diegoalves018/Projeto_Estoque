@@ -6,7 +6,7 @@ import java.sql.*;
 public class UsuarioDao {
 
 	private static final String sql="select *from usuario where email=? and password=?";
-	private static final String DRIVER = "com.mysql.jdbc.Driver";
+	private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/estoque?useTimezone=true&serverTimezone=America/Sao_Paulo";
     private static final String USUARIO = "root";
     private static final String SENHA = "admin";
@@ -23,7 +23,7 @@ public class UsuarioDao {
     public boolean check(String email, String password) {
 		Connection con=null;
 	    try{
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName(DRIVER);
   	
     	 con= DriverManager.getConnection( URL, USUARIO, SENHA );
     	 PreparedStatement ps=con.prepareStatement(sql);
@@ -55,6 +55,17 @@ public class UsuarioDao {
 		}catch(Exception ex){ex.printStackTrace();}
 		
 		return status;
+	}
+	
+	public static boolean existeUsuario(Usuario user) {
+
+		List<Usuario> list=UsuarioDao.getTodosCadastros();
+		for(Usuario e:list){
+			if (e.getEmail().equalsIgnoreCase(user.getEmail())) {
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public static int update(Usuario e){
