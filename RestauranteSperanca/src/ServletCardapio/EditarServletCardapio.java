@@ -16,7 +16,7 @@ import DAO.CardapioDao;
 public class EditarServletCardapio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/jsp");
+		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		out.println("<h1>Atualizar o Cardápio</h1>");
 		String sid=request.getParameter("id");

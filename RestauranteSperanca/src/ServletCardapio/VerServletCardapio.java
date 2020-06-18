@@ -17,7 +17,7 @@ import DAO.CardapioDao;
 public class VerServletCardapio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/jsp");
+		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		out.println("<a href='welcome.jsp'>Voltar</a>");
 		out.println("<h1>Menu Sperança</h1>");

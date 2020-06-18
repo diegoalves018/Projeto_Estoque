@@ -16,7 +16,7 @@ import DAO.ProdutoDao;
 public class EditarServletProduto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/jsp");
+		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		out.println("<h1>Atualizar Produto</h1>");
 		String sid=request.getParameter("id");

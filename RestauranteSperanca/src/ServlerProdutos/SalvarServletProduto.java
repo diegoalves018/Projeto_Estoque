@@ -16,7 +16,7 @@ import DAO.ProdutoDao;
 public class SalvarServletProduto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/jsp");
+		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		
 		String nome_produto=request.getParameter("nome_produto");
