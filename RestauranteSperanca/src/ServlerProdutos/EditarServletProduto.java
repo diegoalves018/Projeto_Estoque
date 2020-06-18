@@ -34,7 +34,7 @@ public class EditarServletProduto extends HttpServlet {
 		out.print("<tr><td colspan='2'><input type='submit' value='Editar &amp; Salvar'/></td></tr>");
 		out.print("</table>");
 		out.print("</form>");
-		out.println("<a href='welcome.jsp'>Página de Login</a>");
+		out.println("<a href='welcome.jsp'>Voltar</a>");
 		out.close();
 	}
 }

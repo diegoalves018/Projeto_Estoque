@@ -29,9 +29,9 @@ public class EditarServlet2Cardapio extends HttpServlet {
 		Cardapio c=new Cardapio();
 		c.setId(id);
 		c.setNome_prato(nome_prato);
-		c.setDescricao(descricao);
 		c.setDisponivel(disponivel);
 		c.setPreco(preco);
+		c.setDescricao(descricao);
 		
 		int status=CardapioDao.update(c);
 		if(status>0){
