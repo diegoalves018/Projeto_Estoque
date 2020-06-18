@@ -15,7 +15,7 @@
 <option value="Sim">Sim</option>
 <option value="Não">Não</option>
 </select></td></tr>
-<tr><td>Preço:</td><td><input type="number" name="preco"/></td></tr>
+<tr><td>Preço:</td><td><input type="number" step="0.01" min="0" max="9999999.99" name="preco"/></td></tr>
 <tr><td>Descrição:</td><td><textarea name="descricao"></textarea></td></tr>
 <tr><td colspan="2"><input type="submit" value="Salvar"/></td></tr>
 </table>

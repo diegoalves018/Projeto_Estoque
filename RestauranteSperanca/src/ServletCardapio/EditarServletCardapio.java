@@ -32,7 +32,7 @@ public class EditarServletCardapio extends HttpServlet {
 				"<option value=\"Sim\">Sim</option>\r\n" + 
 				"<option value=\"Não\">Não</option>\r\n" + 
 				"</select></td></tr>'"+c.getDisponivel()+"'/></td></tr>");
-		out.print("<tr><td>Preço:</td><td><input type='number' name='preco' value='"+c.getPreco()+"'/></td></tr>");
+		out.print("<tr><td>Preço:</td><td><input type='number'  step='0.01' min='0' max='9999999.99' name='preco' value='"+c.getPreco()+"'/></td></tr>");
 		out.print("<tr><td>Decrição:</td><td><textarea name=\"descricao\">"+c.getDescricao()+"</textarea></td></tr>");
 		out.print("<tr><td colspan='2'><input type='submit' value='Editar &amp; Salvar'/></td></tr>");
 		out.print("</table>");
